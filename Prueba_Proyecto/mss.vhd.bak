@@ -1,0 +1,44 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+Entity mss is
+Port(	Clock1, Reset, Start: in std_logic;
+	cont, reset_T: out std_logic);
+end mss;
+
+Architecture arq_mss of mss is 
+type estado is (Ta, Tb, Tc);
+signal y : estado;
+begin
+	process(Reset, clock1)
+	begin
+		if Reset = '0' then y <= Ta;
+		elsif clock1'event and clock1 = '1' then 
+			case y is
+				when Ta =>
+					if start = '1' then y<=Tb;
+					else y<=Ta;
+					end if;
+				when Tb =>
+					if start = '0' then y<=Tc;
+					else y<=Tb;
+					end if;
+				when Tc =>
+					y<=Ta;
+			end case;
+		end if;
+	end process;
+	process (y)
+	begin
+		case y is
+			when Ta =>
+				if start = '1' then Cont<='1';reset_T<='0';
+				else reset_T<='1';
+				end if;
+			when Tb =>
+				
+			when Tc =>
+				Cont<='0';
+		end case;
+	end process;
+end arq_mss;

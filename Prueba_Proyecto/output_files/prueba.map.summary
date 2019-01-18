@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Jan 17 13:46:48 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : prueba
+Top-level Entity Name : Diagrama_prueba
+Family : Cyclone IV E
+Total logic elements : 106
+    Total combinational functions : 90
+    Dedicated logic registers : 85
+Total registers : 85
+Total pins : 29
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

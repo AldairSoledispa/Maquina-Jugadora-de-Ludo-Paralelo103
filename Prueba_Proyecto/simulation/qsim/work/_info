@@ -1,0 +1,327 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Municipio de Gye/Documents/Aldair/Universidad/7- Semestre/Sistemas Digitales II/Proyecto/Prueba_Proyecto/simulation/qsim
+Ealeatorio_turno
+Z0 w1547607678
+Z1 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 U]E`hi0:`oKa5cWiFZ>hl3
+Z2 DPx10 cycloneive 21 cycloneive_components 0 22 7:=`d=[QUY_aUcbj<lC000
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z8 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
+Z9 dC:/Users/Municipio de Gye/Documents/Aldair/Universidad/7- Semestre/Sistemas Digitales II/Proyecto/Prueba_Proyecto respaldo/simulation/qsim
+Z10 8prueba.vho
+Z11 Fprueba.vho
+l0
+L36
+V>D7`<zdR^laPj0Ca8d[BF0
+!s100 1El:N8n>SVlKLzZC?8mB<3
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1547607774
+!i10b 1
+Z14 !s108 1547607774.000000
+Z15 !s90 -work|work|prueba.vho|
+Z16 !s107 prueba.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 15 aleatorio_turno 0 22 >D7`<zdR^laPj0Ca8d[BF0
+l66
+L45
+Vi=4lWm;5RWCdE14R4lndO2
+!s100 UInK2eNMK_5XHI]^7LeNm0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ealeatorio_turno_vhd_vec_tst
+Z19 w1547607676
+R6
+R7
+R9
+Z20 8vwf_Turno.vwf.vht
+Z21 Fvwf_Turno.vwf.vht
+l0
+L31
+V^XKYHdZzUBH=9YhbgXL680
+!s100 [je]7aWf`Mm?BB=SA21Qz0
+R12
+32
+Z22 !s110 1547607680
+!i10b 1
+Z23 !s108 1547607679.000000
+Z24 !s90 -work|work|vwf_Turno.vwf.vht|
+Z25 !s107 vwf_Turno.vwf.vht|
+!i113 1
+R17
+R18
+Aaleatorio_turno_arch
+R6
+R7
+DEx4 work 27 aleatorio_turno_vhd_vec_tst 0 22 ^XKYHdZzUBH=9YhbgXL680
+l48
+L33
+V8Aohk;JKFFG4A;AW0XnQl3
+!s100 QBi<2j=[Ul[G4O`<U63f^0
+R12
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R17
+R18
+Ediagrama_prueba
+Z26 w1547736518
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+Z27 dC:/Users/Municipio de Gye/Desktop/Prueba_Proyecto/simulation/qsim
+R10
+R11
+l0
+L79
+V_2;aT6f@zazJPZ]9mQ76J2
+!s100 nDl[?FhEhcDbMij7I_eh22
+R12
+32
+Z28 !s110 1547736530
+!i10b 1
+Z29 !s108 1547736527.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 15 diagrama_prueba 0 22 _2;aT6f@zazJPZ]9mQ76J2
+l365
+L129
+VmaK1miI@>c4ojC=PTkV;S1
+!s100 9e>5Nch8[K_7PZmH71i`>3
+R12
+32
+R28
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18
+Ediagrama_prueba_vhd_vec_tst
+Z30 w1547736516
+R6
+R7
+R27
+Z31 8vwf_general.vwf.vht
+Z32 Fvwf_general.vwf.vht
+l0
+L31
+VVjjXog]iFV9lHXK1YQH9_0
+!s100 d^9e>R[9fH99NSDPGfE5]0
+R12
+32
+R28
+!i10b 1
+Z33 !s108 1547736530.000000
+Z34 !s90 -work|work|vwf_general.vwf.vht|
+Z35 !s107 vwf_general.vwf.vht|
+!i113 1
+R17
+R18
+Adiagrama_prueba_arch
+R6
+R7
+Z36 DEx4 work 27 diagrama_prueba_vhd_vec_tst 0 22 VjjXog]iFV9lHXK1YQH9_0
+l66
+L33
+Vk6EUGlknTi_Y4@`DVhJ950
+!s100 zi5gcV[I?meEC7Qh8hQbW3
+R12
+32
+R28
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R17
+R18
+Ehard_block
+R26
+R3
+R1
+R5
+R6
+R7
+R2
+R27
+R10
+R11
+l0
+L34
+VOgIg9T_BR7joedFDVM>H13
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R12
+32
+Z37 !s110 1547736529
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R3
+R1
+R5
+R6
+R7
+R2
+DEx4 work 10 hard_block 0 22 OgIg9T_BR7joedFDVM>H13
+l64
+L50
+V`^CmQg<48W[ez[JL_5@Yn2
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R12
+32
+R37
+!i10b 1
+R29
+R15
+R16
+!i113 1
+R17
+R18
+Emss
+Z38 w1547617145
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R27
+R10
+R11
+l0
+L36
+VgR3@RTSNi1lR3jKIN?:FA2
+!s100 ?zY3=O3[;Ajmo0>YV9[?o2
+R12
+32
+Z39 !s110 1547658256
+!i10b 1
+Z40 !s108 1547658256.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 3 mss 0 22 gR3@RTSNi1lR3jKIN?:FA2
+l146
+L61
+VUiP=_0nf<`4MGDaN>T;d91
+!s100 @JgkQNWm;1DP=^QB:AG`C0
+R12
+32
+R39
+!i10b 1
+R40
+R15
+R16
+!i113 1
+R17
+R18
+Emss_vhd_vec_tst
+Z41 w1547617143
+R6
+R7
+R27
+Z42 8vwf_mss.vwf.vht
+Z43 Fvwf_mss.vwf.vht
+l0
+L31
+VhJ8iNk_Z3e_C]5S`dmFVb0
+!s100 D]A=?2D:BVCJd[jA73UjE0
+R12
+32
+Z44 !s110 1547658636
+!i10b 1
+Z45 !s108 1547658636.000000
+Z46 !s90 -work|work|vwf_mss.vwf.vht|
+Z47 !s107 vwf_mss.vwf.vht|
+!i113 1
+R17
+R18
+Amss_arch
+R6
+R7
+DEx4 work 15 mss_vhd_vec_tst 0 22 hJ8iNk_Z3e_C]5S`dmFVb0
+l80
+L33
+VlHQ61n^d]Kb8zh5dzZ?@71
+!s100 O3KH@0PR>aB0fUK2?f5c^2
+R12
+32
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R17
+R18

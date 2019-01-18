@@ -1,0 +1,331 @@
+|Diagrama_prueba
+Led_J1 <= mss:mss.Led_J1
+reloj_in => CLOCK_DIV_50:DIV.CLOCK_50MHz
+reset => ANTIREBOTE:inst1.PB_N
+Start => ANTIREBOTE:inst2.PB_N
+J1 => ANTIREBOTE:inst3.PB_N
+J2 => ANTIREBOTE:inst4.PB_N
+Led_J2 <= mss:mss.Led_J2
+Fin_J1 <= Gana_J1.DB_MAX_OUTPUT_PORT_TYPE
+Fin_J2 <= Gana_J2.DB_MAX_OUTPUT_PORT_TYPE
+Acumulado_J1[0] <= registro_sost:Registro_J1.Q[0]
+Acumulado_J1[1] <= registro_sost:Registro_J1.Q[1]
+Acumulado_J1[2] <= registro_sost:Registro_J1.Q[2]
+Acumulado_J1[3] <= registro_sost:Registro_J1.Q[3]
+Acumulado_J1[4] <= registro_sost:Registro_J1.Q[4]
+Acumulado_J2[0] <= registro_sost:Registro_J2.Q[0]
+Acumulado_J2[1] <= registro_sost:Registro_J2.Q[1]
+Acumulado_J2[2] <= registro_sost:Registro_J2.Q[2]
+Acumulado_J2[3] <= registro_sost:Registro_J2.Q[3]
+Acumulado_J2[4] <= registro_sost:Registro_J2.Q[4]
+Numero_J1[0] <= Aleatorio_D:Aleatorio_J1.Q[0]
+Numero_J1[1] <= Aleatorio_D:Aleatorio_J1.Q[1]
+Numero_J1[2] <= Aleatorio_D:Aleatorio_J1.Q[2]
+Numero_J1[3] <= Aleatorio_D:Aleatorio_J1.Q[3]
+Numero_J1[4] <= Aleatorio_D:Aleatorio_J1.Q[4]
+Numero_J2[0] <= Aleatorio_D:Aleatorio_J2.Q[0]
+Numero_J2[1] <= Aleatorio_D:Aleatorio_J2.Q[1]
+Numero_J2[2] <= Aleatorio_D:Aleatorio_J2.Q[2]
+Numero_J2[3] <= Aleatorio_D:Aleatorio_J2.Q[3]
+Numero_J2[4] <= Aleatorio_D:Aleatorio_J2.Q[4]
+
+
+|Diagrama_prueba|mss:mss
+Clock1 => y~3.DATAIN
+Reset => y~5.DATAIN
+Start => y.DATAB
+Start => cont.DATAB
+Start => reset_T.DATAB
+Start => Selector5.IN2
+Start => Selector6.IN2
+Start => Selector7.IN2
+Start => Selector8.IN2
+Start => Selector0.IN4
+Start => y.DATAB
+ct1 => Selector2.IN4
+ct1 => Selector4.IN4
+ct1 => Selector3.IN2
+ct1 => Selector1.IN4
+J1 => A1.DATAB
+J1 => Selector1.IN1
+J1 => y.DATAB
+J2 => A2.DATAB
+J2 => Selector2.IN2
+J2 => y.DATAB
+Gana_J1 => y.DATAB
+Gana_J1 => Selector2.IN1
+Gana_J2 => y.DATAB
+Gana_J2 => Selector1.IN2
+cont <= cont.DB_MAX_OUTPUT_PORT_TYPE
+reset_T <= reset_T.DB_MAX_OUTPUT_PORT_TYPE
+A1 <= A1.DB_MAX_OUTPUT_PORT_TYPE
+A2 <= A2.DB_MAX_OUTPUT_PORT_TYPE
+reset_A1 <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+reset_A2 <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+Led_J1 <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
+Led_J2 <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+Reg_1 <= Reg_1.DB_MAX_OUTPUT_PORT_TYPE
+Reg_2 <= Reg_2.DB_MAX_OUTPUT_PORT_TYPE
+reset_R1 <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
+reset_R2 <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|CLOCK_DIV_50:DIV
+CLOCK_50MHz => CLOCK_1Hz~reg0.CLK
+CLOCK_50MHz => CLOCK_10Hz~reg0.CLK
+CLOCK_50MHz => CLOCK_100Hz~reg0.CLK
+CLOCK_50MHz => CLOCK_1KHz~reg0.CLK
+CLOCK_50MHz => CLOCK_10KHz~reg0.CLK
+CLOCK_50MHz => CLOCK_100KHz~reg0.CLK
+CLOCK_50MHz => CLOCK_1MHz~reg0.CLK
+CLOCK_50MHz => clock_1Mhz_int.CLK
+CLOCK_50MHz => count_1Mhz[0].CLK
+CLOCK_50MHz => count_1Mhz[1].CLK
+CLOCK_50MHz => count_1Mhz[2].CLK
+CLOCK_50MHz => count_1Mhz[3].CLK
+CLOCK_50MHz => count_1Mhz[4].CLK
+CLOCK_50MHz => count_1Mhz[5].CLK
+CLOCK_1MHz <= CLOCK_1MHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_100KHz <= CLOCK_100KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_10KHz <= CLOCK_10KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_1KHz <= CLOCK_1KHz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_100Hz <= CLOCK_100Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_10Hz <= CLOCK_10Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK_1Hz <= CLOCK_1Hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|ANTIREBOTE:inst1
+PB_N => SHIFT_PB[3].DATAIN
+CLOCK_100Hz => PB_SIN_REBOTE~reg0.CLK
+CLOCK_100Hz => SHIFT_PB[0].CLK
+CLOCK_100Hz => SHIFT_PB[1].CLK
+CLOCK_100Hz => SHIFT_PB[2].CLK
+CLOCK_100Hz => SHIFT_PB[3].CLK
+PB_SIN_REBOTE <= PB_SIN_REBOTE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|ANTIREBOTE:inst2
+PB_N => SHIFT_PB[3].DATAIN
+CLOCK_100Hz => PB_SIN_REBOTE~reg0.CLK
+CLOCK_100Hz => SHIFT_PB[0].CLK
+CLOCK_100Hz => SHIFT_PB[1].CLK
+CLOCK_100Hz => SHIFT_PB[2].CLK
+CLOCK_100Hz => SHIFT_PB[3].CLK
+PB_SIN_REBOTE <= PB_SIN_REBOTE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|Aleatorio_Turno:Turno_inicial
+reloj => conteo.CLK
+reset => conteo.ENA
+En => conteo.OUTPUTSELECT
+Q <= conteo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|ANTIREBOTE:inst3
+PB_N => SHIFT_PB[3].DATAIN
+CLOCK_100Hz => PB_SIN_REBOTE~reg0.CLK
+CLOCK_100Hz => SHIFT_PB[0].CLK
+CLOCK_100Hz => SHIFT_PB[1].CLK
+CLOCK_100Hz => SHIFT_PB[2].CLK
+CLOCK_100Hz => SHIFT_PB[3].CLK
+PB_SIN_REBOTE <= PB_SIN_REBOTE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|ANTIREBOTE:inst4
+PB_N => SHIFT_PB[3].DATAIN
+CLOCK_100Hz => PB_SIN_REBOTE~reg0.CLK
+CLOCK_100Hz => SHIFT_PB[0].CLK
+CLOCK_100Hz => SHIFT_PB[1].CLK
+CLOCK_100Hz => SHIFT_PB[2].CLK
+CLOCK_100Hz => SHIFT_PB[3].CLK
+PB_SIN_REBOTE <= PB_SIN_REBOTE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|comparador:inst7
+N[0] => LessThan0.IN10
+N[0] => LessThan1.IN10
+N[0] => Equal0.IN4
+N[1] => LessThan0.IN9
+N[1] => LessThan1.IN9
+N[1] => Equal0.IN2
+N[2] => LessThan0.IN8
+N[2] => LessThan1.IN8
+N[2] => Equal0.IN3
+N[3] => LessThan0.IN7
+N[3] => LessThan1.IN7
+N[3] => Equal0.IN1
+N[4] => LessThan0.IN6
+N[4] => LessThan1.IN6
+N[4] => Equal0.IN0
+igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mayor <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+menor <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|registro_sost:Registro_J1
+Reset => Q[0]~reg0.ACLR
+Reset => Q[1]~reg0.ACLR
+Reset => Q[2]~reg0.ACLR
+Reset => Q[3]~reg0.ACLR
+Reset => Q[4]~reg0.ACLR
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+En => Q[4]~reg0.ENA
+En => Q[3]~reg0.ENA
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Entrada[0] => Q[0]~reg0.DATAIN
+Entrada[1] => Q[1]~reg0.DATAIN
+Entrada[2] => Q[2]~reg0.DATAIN
+Entrada[3] => Q[3]~reg0.DATAIN
+Entrada[4] => Q[4]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|Sumador:Sumador_J1
+a[0] => Add0.IN5
+a[1] => Add0.IN4
+a[2] => Add0.IN3
+a[3] => Add0.IN2
+a[4] => Add0.IN1
+b[0] => Add0.IN10
+b[1] => Add0.IN9
+b[2] => Add0.IN8
+b[3] => Add0.IN7
+b[4] => Add0.IN6
+salida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+c <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|Aleatorio_D:Aleatorio_J1
+reloj => aux[0].CLK
+reloj => conteo[0].CLK
+reloj => conteo[1].CLK
+reloj => conteo[2].CLK
+reloj => conteo[3].CLK
+reloj => conteo[4].CLK
+reset => aux[0].ENA
+reset => conteo[4].ENA
+reset => conteo[3].ENA
+reset => conteo[2].ENA
+reset => conteo[1].ENA
+reset => conteo[0].ENA
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => aux.OUTPUTSELECT
+Q[0] <= conteo[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= conteo[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= conteo[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= conteo[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= conteo[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|comparador:inst8
+N[0] => LessThan0.IN10
+N[0] => LessThan1.IN10
+N[0] => Equal0.IN4
+N[1] => LessThan0.IN9
+N[1] => LessThan1.IN9
+N[1] => Equal0.IN2
+N[2] => LessThan0.IN8
+N[2] => LessThan1.IN8
+N[2] => Equal0.IN3
+N[3] => LessThan0.IN7
+N[3] => LessThan1.IN7
+N[3] => Equal0.IN1
+N[4] => LessThan0.IN6
+N[4] => LessThan1.IN6
+N[4] => Equal0.IN0
+igual <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+mayor <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+menor <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|registro_sost:Registro_J2
+Reset => Q[0]~reg0.ACLR
+Reset => Q[1]~reg0.ACLR
+Reset => Q[2]~reg0.ACLR
+Reset => Q[3]~reg0.ACLR
+Reset => Q[4]~reg0.ACLR
+Clock => Q[0]~reg0.CLK
+Clock => Q[1]~reg0.CLK
+Clock => Q[2]~reg0.CLK
+Clock => Q[3]~reg0.CLK
+Clock => Q[4]~reg0.CLK
+En => Q[4]~reg0.ENA
+En => Q[3]~reg0.ENA
+En => Q[2]~reg0.ENA
+En => Q[1]~reg0.ENA
+En => Q[0]~reg0.ENA
+Entrada[0] => Q[0]~reg0.DATAIN
+Entrada[1] => Q[1]~reg0.DATAIN
+Entrada[2] => Q[2]~reg0.DATAIN
+Entrada[3] => Q[3]~reg0.DATAIN
+Entrada[4] => Q[4]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|Sumador:Sumador_J2
+a[0] => Add0.IN5
+a[1] => Add0.IN4
+a[2] => Add0.IN3
+a[3] => Add0.IN2
+a[4] => Add0.IN1
+b[0] => Add0.IN10
+b[1] => Add0.IN9
+b[2] => Add0.IN8
+b[3] => Add0.IN7
+b[4] => Add0.IN6
+salida[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+salida[4] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+c <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Diagrama_prueba|Aleatorio_D:Aleatorio_J2
+reloj => aux[0].CLK
+reloj => conteo[0].CLK
+reloj => conteo[1].CLK
+reloj => conteo[2].CLK
+reloj => conteo[3].CLK
+reloj => conteo[4].CLK
+reset => aux[0].ENA
+reset => conteo[4].ENA
+reset => conteo[3].ENA
+reset => conteo[2].ENA
+reset => conteo[1].ENA
+reset => conteo[0].ENA
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => conteo.OUTPUTSELECT
+En => aux.OUTPUTSELECT
+Q[0] <= conteo[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= conteo[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= conteo[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= conteo[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= conteo[4].DB_MAX_OUTPUT_PORT_TYPE
+
+

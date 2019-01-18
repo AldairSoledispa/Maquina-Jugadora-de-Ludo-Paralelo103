@@ -1,0 +1,16 @@
+
+State Machine - |Diagrama_prueba|mss:mss|y
+Name y.Tt y.Ts y.Tr y.Tq y.Tp y.Th y.Tg y.Tf y.Te y.Td y.Tc y.Tb y.Ta 
+y.Ta 0 0 0 0 0 0 0 0 0 0 0 0 0 
+y.Tb 0 0 0 0 0 0 0 0 0 0 0 1 1 
+y.Tc 0 0 0 0 0 0 0 0 0 0 1 0 1 
+y.Td 0 0 0 0 0 0 0 0 0 1 0 0 1 
+y.Te 0 0 0 0 0 0 0 0 1 0 0 0 1 
+y.Tf 0 0 0 0 0 0 0 1 0 0 0 0 1 
+y.Tg 0 0 0 0 0 0 1 0 0 0 0 0 1 
+y.Th 0 0 0 0 0 1 0 0 0 0 0 0 1 
+y.Tp 0 0 0 0 1 0 0 0 0 0 0 0 1 
+y.Tq 0 0 0 1 0 0 0 0 0 0 0 0 1 
+y.Tr 0 0 1 0 0 0 0 0 0 0 0 0 1 
+y.Ts 0 1 0 0 0 0 0 0 0 0 0 0 1 
+y.Tt 1 0 0 0 0 0 0 0 0 0 0 0 1 
